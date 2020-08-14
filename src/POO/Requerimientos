@@ -8,4 +8,20 @@ Realizar un programa que realice unos calulos con las notas de un estudiante
   6-Crear al menos 5 estudiantes
   7-Crear el proyecto en github
   
+  13 de agosto
+  8- Cambiar todo el programa anterior para que utilice arreglos
+  9- No permitir asignaturas repetidas
+  
+  
+  
   Fecha de entrega domingo 9 de agosto
+  
+  
+  
+  
+  11DE AGOSTO
+  Arreglo: sirve para ingresar varias variables(int, String, float, ... objetos de cualquier tipo)
+  
+  Asignaruta[]asignaturas = new Asignatura[];
+  asignaturas[0] = a1;
+  			

@@ -7,12 +7,12 @@ public class Program {
 		Alumno a1 = new Alumno();
 		a1.nombre = "Rafael";		
 		  Materia mat1 = new Materia();
-		  mat1.nombre = "microcntroladores";
+		  mat1.nombre = "Matematicas";
 		  mat1.nota = 4;
 		  mat1.numeroDeCreditos = 3;
 		  mat1.valorDeCreditos = 21000;
 		  Materia mat2 = new Materia();
-		  mat2.nombre = "Matematicas";
+		  mat2.nombre = "Microcontroladores";
 		  mat2.nota = 2;
 		  mat2.numeroDeCreditos = 3;
 		  mat2.valorDeCreditos = 21000;
@@ -30,12 +30,48 @@ public class Program {
 		  mat5.nombre = "Infoetica";
 		  mat5.nota = 2.9;
 		  mat5.numeroDeCreditos = 3;
-		  mat5.valorDeCreditos = 21000;		
-			a1.m1 = mat1;
-			a1.m2 = mat2;
-			a1.m3 = mat3;
-			a1.m4 = mat4;
-			a1.m5 = mat5;		
+		  mat5.valorDeCreditos = 21000;		  
+		  
+		  if(a1.materiaRepetida(mat1.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mat1;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mat1.nombre + " YA esta");
+		  }
+		  
+		  if(a1.materiaRepetida(mat2.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = mat2;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mat2.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(mat3.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mat3;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mat3.nombre + " YA ESTA");
+		  }
+		  
+		  if(a1.materiaRepetida(mat4.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = mat4;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mat4.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(mat5.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mat5;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mat5.nombre + " YA ESTA");
+		  }	  
+					
 		double promedioA1 = a1.calculoDePromedio();
 		System.out.println("PROMEDIO del estudiante " + a1.nombre + " es: " + promedioA1);
 		int mariaPerdidaA1 = a1.materiaPerdida();
@@ -52,17 +88,17 @@ public class Program {
 		Alumno a2 = new Alumno();
 		a2.nombre = "Martin";		
 		  Materia mate1 = new Materia();
-		  mate1.nombre = "microcntroladores";
+		  mate1.nombre = "Ingles";
 		  mate1.nota = 2;
 		  mate1.numeroDeCreditos = 3;
 		  mate1.valorDeCreditos = 21000;
 		  Materia mate2 = new Materia();
-		  mate2.nombre = "Matematicas";
+		  mate2.nombre = "Fisica";
 		  mate2.nota = 5;
 		  mate2.numeroDeCreditos = 3;
 		  mate2.valorDeCreditos = 21000;
 		  Materia mate3 = new Materia();
-		  mate3.nombre = "Programacion";
+		  mate3.nombre = "Estructura de datos";
 		  mate3.nota = 3.2;
 		  mate3.numeroDeCreditos = 3;
 		  mate3.valorDeCreditos = 21000;
@@ -72,15 +108,51 @@ public class Program {
 		  mate4.numeroDeCreditos = 2;
 		  mate4.valorDeCreditos = 14000;
 		  Materia mate5 = new Materia();
-		  mate5.nombre = "Infoetica";
+		  mate5.nombre = "Electronica+";
 		  mate5.nota = 2.5;
 		  mate5.numeroDeCreditos = 3;
-		  mate5.valorDeCreditos = 21000;		
-			a2.m1 = mate1;
-			a2.m2 = mate2;
-			a2.m3 = mate3;
-			a2.m4 = mate4;
-			a2.m5 = mate5;		
+		  mate5.valorDeCreditos = 21000;
+		  
+		  if(a1.materiaRepetida(mate1.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mate1;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mate1.nombre + " YA esta");
+		  }
+		  
+		  if(a1.materiaRepetida(mate2.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = mate2;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mate2.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(mate3.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mate3;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mate3.nombre + " YA ESTA");
+		  }
+		  
+		  if(a1.materiaRepetida(mate4.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = mate4;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mate4.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(mate5.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mate5;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mate5.nombre + " YA ESTA");
+		  }		  
+					
 		double promedioA2 = a2.calculoDePromedio();
 		System.out.println("PROMEDIO del estudiante " + a2.nombre + " es: " + promedioA2);
 		int mariaPerdidaA2 = a2.materiaPerdida();
@@ -120,12 +192,48 @@ public class Program {
 		  matE5.nombre = "Infoetica";
 		  matE5.nota = 5;
 		  matE5.numeroDeCreditos = 3;
-		  matE5.valorDeCreditos = 21000;		
-		  	a3.m1 = matE1;
-		  	a3.m2 = matE2;
-		  	a3.m3 = matE3;
-		  	a3.m4 = matE4;
-		  	a3.m5 = matE5;		
+		  matE5.valorDeCreditos = 21000;
+		  
+		  if(a1.materiaRepetida(matE1.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = matE1;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + matE1.nombre + " YA esta");
+		  }
+		  
+		  if(a1.materiaRepetida(matE2.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = matE2;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + matE2.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(matE3.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = matE3;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + matE3.nombre + " YA ESTA");
+		  }
+		  
+		  if(a1.materiaRepetida(matE4.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = matE4;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + matE4.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(matE5.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = matE5;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + matE5.nombre + " YA ESTA");
+		  }
+		  			
 		double promedioA3 = a3.calculoDePromedio();
 		System.out.println("PROMEDIO del estudiante " + a3.nombre + " es: " + promedioA3);
 		int mariaPerdidaA3 = a3.materiaPerdida();
@@ -165,12 +273,48 @@ public class Program {
 		  maTe5.nombre = "Infoetica";
 		  maTe5.nota = 1.8;
 		  maTe5.numeroDeCreditos = 3;
-		  maTe5.valorDeCreditos = 21000;		
-		  	a4.m1 = maTe1;
-		  	a4.m2 = maTe2;
-		  	a4.m3 = maTe3;
-		  	a4.m4 = maTe4;
-		  	a4.m5 = maTe5;		
+		  maTe5.valorDeCreditos = 21000;
+		  
+		  if(a1.materiaRepetida(maTe1.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = maTe1;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + maTe1.nombre + " YA esta");
+		  }
+		  
+		  if(a1.materiaRepetida(maTe2.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = maTe2;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + maTe2.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(maTe3.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = maTe3;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + maTe3.nombre + " YA ESTA");
+		  }
+		  
+		  if(a1.materiaRepetida(maTe4.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = maTe4;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + maTe4.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(maTe5.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = maTe5;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + maTe5.nombre + " YA ESTA");
+		  }
+		  			
 		double promedioA4 = a4.calculoDePromedio();
 		System.out.println("PROMEDIO del estudiante " + a4.nombre + " es: " + promedioA4);
 		int mariaPerdidaA4 = a4.materiaPerdida();
@@ -212,11 +356,7 @@ public class Program {
 		  mAte5.nota = 4.5;
 		  mAte5.numeroDeCreditos = 3;
 		  mAte5.valorDeCreditos = 21000;		
-		  	a5.m1 = mAte1;
-		  	a5.m2 = mAte2;
-		  	a5.m3 = mAte3;
-		  	a5.m4 = mAte4;
-		  	a5.m5 = mAte5;		
+		  			
 		double promedioA5 = a5.calculoDePromedio();
 		System.out.println("PROMEDIO del estudiante " + a5.nombre + " es: " + promedioA5);
 		int mariaPerdidaA5 = a5.materiaPerdida();
@@ -257,12 +397,48 @@ public class Program {
 		  mA5.nombre = "Infoetica";
 		  mA5.nota = 5;
 		  mA5.numeroDeCreditos = 3;
-		  mA5.valorDeCreditos = 21000;		
-		  	a6.m1 = mA1;
-		  	a6.m2 = mA2;	
-		  	a6.m3 = mA3;
-		  	a6.m4 = mA4;
-		  	a6.m5 = mA5;		
+		  mA5.valorDeCreditos = 21000;
+		  
+		  if(a1.materiaRepetida(mA1.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mA1;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mA1.nombre + " YA esta");
+		  }
+		  
+		  if(a1.materiaRepetida(mA2.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = mA2;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mA2.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(mA3.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mA3;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mA3.nombre + " YA ESTA");
+		  }
+		  
+		  if(a1.materiaRepetida(mA4.nombre) == false) {		  
+			  a1.materias[a1.cantDedMateriasAlumno] = mA4;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mA4.nombre + " YA esta");
+		  }
+		  
+		  if (a1.materiaRepetida(mA5.nombre) == false) {
+			  a1.materias[a1.cantDedMateriasAlumno] = mA5;
+			  a1.cantDedMateriasAlumno++;
+		  }
+		  else {
+			  System.out.println("La materia " + mA5.nombre + " YA ESTA");
+		  }
+		  			
 		double promedioA6 = a6.calculoDePromedio();
 		System.out.println("PROMEDIO del estudiante " + a6.nombre + " es: " + promedioA6);
 		int mariaPerdidaA6 = a6.materiaPerdida();
@@ -274,9 +450,5 @@ public class Program {
 		int CreditosAPgarA6 = a6.dineroParaRepetirCreditos();
 		System.out.println("DINERO POR CREDITOS - " + a6.nombre + " debe pagar $" + CreditosAPgarA6);
 		System.out.println("************");
-		
-	
-
 	}
-
 }
