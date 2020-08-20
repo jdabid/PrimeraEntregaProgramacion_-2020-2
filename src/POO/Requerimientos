@@ -1,5 +1,6 @@
 Realizar un programa que realice unos calulos con las notas de un estudiante
   
+  Fecha de entrega domingo 9 de agosto
   1-promedio semestre--OK
   2-cuantas asignaturas perdio--OK
   3-cuantas asignaturas gano--OK
@@ -8,20 +9,26 @@ Realizar un programa que realice unos calulos con las notas de un estudiante
   6-Crear al menos 5 estudiantes
   7-Crear el proyecto en github
   
+  
   13 de agosto
   8- Cambiar todo el programa anterior para que utilice arreglos
   9- No permitir asignaturas repetidas
   
   
+  19 de agosto
+  10 implementar el metodo de agregar asignatura, dentro del metodo se debe validar las siguientes reglas:
+  a. no permitir asignaturas repetidas
+  b. cada estudiante tiene un numero maximo de creditos y cada asignatura tambien tiene un numero maximo de creditos.
+  	si el estudiante no tiene suficientes creditos para agragar la asignatura el sistema debe indicar un error
+  	Ejemplo un estudiante tiene 8 creditos agraga la asignatura x1 = 3 creditos, x2 = 4 creditos, x3 = 3 creditos .. 
+  	"No tiene crditos disponibles"
   
-  Fecha de entrega domingo 9 de agosto
   
   
   
   
-  11DE AGOSTO
-  Arreglo: sirve para ingresar varias variables(int, String, float, ... objetos de cualquier tipo)
   
-  Asignaruta[]asignaturas = new Asignatura[];
-  asignaturas[0] = a1;
+  
+  
+  
   			

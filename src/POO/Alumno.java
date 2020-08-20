@@ -2,25 +2,52 @@ package POO;
 
 public class Alumno {
 	
-	String nombre;
- 	
-	Materia [] materias = new Materia[15];
+	String nombre; 	
+	static final int MAX_CANTDEMATERIAS = 15;
+	Materia [] materias = new Materia[Alumno.MAX_CANTDEMATERIAS];
 	int cantDedMateriasAlumno = 0;
+	static final int MAX_CANTDECREDITOS = 22;
 	
-	boolean materiaRepetida(String nombreMateria) {
-		boolean respuesta = false;
-		for(int i = 0; i<cantDedMateriasAlumno; i++) {
-			if(nombreMateria == materias[i].nombre) {
-				respuesta = true;
+	
+	public void adMaterias(Materia mUno) throws Exception {
+		
+		boolean yaexiste = false;
+		int sumatoriaDeCreditos = 0;
+		
+		
+		for(int i = 0; i<cantDedMateriasAlumno; i++) {			
+			sumatoriaDeCreditos = sumatoriaDeCreditos + mUno.numeroDeCreditos;			
+			if(mUno.nombre == materias[i].nombre) {
+				yaexiste = true;
 			}				
 		}
-		return respuesta;
+		
+		if(yaexiste == true) {
+			throw new Exception("LA materia " + mUno.nombre + " ya esta inscrita");
 		}
+		
+		sumatoriaDeCreditos = sumatoriaDeCreditos + mUno.numeroDeCreditos;
+		if(sumatoriaDeCreditos > MAX_CANTDECREDITOS)
+			throw new Exception("El estudiante NO tiene creditos disponibles");
+		
+		
+		if(cantDedMateriasAlumno == MAX_CANTDEMATERIAS) {
+			throw new Exception("El estudiante ya tiene el maximo de materias inscritas");
+		}
+		
+		
+		
+		
+		materias[cantDedMateriasAlumno] = mUno;
+		cantDedMateriasAlumno++;
+		
+		
+	}
 	
 	
 	double calculoDePromedio() {		
-		double prom = 0;
-		
+		double prom = 0;	
+				
 		for(int i = 0; i<cantDedMateriasAlumno; i++) {
 			prom = prom + materias[i].nota;
 		}		
